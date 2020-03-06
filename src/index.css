@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #02590F;
   
 }
 
@@ -22,9 +23,6 @@ html{
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  height: 32rem;
-  background: #02590F;
-
 }
 
 
@@ -50,9 +48,4 @@ html{
   height: 50px;
   margin-top: 10px;
 
-}
-
-
-.ArticleStuff,  h1, p{
-text-align: center;
 }

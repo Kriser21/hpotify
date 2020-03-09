@@ -46,6 +46,7 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
   return (
     <div>
     {apiData && apiData.title}
+    <img src={apiData && apiData.cover_big} alt="" />
   </div>
   );
 };

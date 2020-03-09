@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App.scss';
 import logo from './logo1.png';
 
 
@@ -44,9 +44,12 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
     return () => fetchController.abort();
   }, [apiData]);
   return (
-    <div>
+    <div className="wrapper">
+    <img src={apiData && apiData.cover} alt="" />
+    <img src={apiData && apiData.cover} alt="" />
     {apiData && apiData.title}
-    <img src={apiData && apiData.cover_big} alt="" />
+    <br/>
+  <div>{apiData && apiData.tracks.data[0].title}</div>
   </div>
   );
 };

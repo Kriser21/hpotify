@@ -18,7 +18,7 @@ function App() {
         </nav>
 
         <div className= "todo">
-        <div className="item1">Jump back in</div>
+        <div className="item1">Velkommen til Hpotify</div>
   
         </div>
       </Container>

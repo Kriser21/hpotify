@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import logo from './logo1.png';
 import ReactPlayer from 'react-player'
+import { render } from '@testing-library/react';
 
 
 const FetchPage = props => {
@@ -40,9 +41,11 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
   });
     }
   });
-  function test6(){
+    // **********************************************
+ // loopper igemen array til tracks
+// ************************************************
+
   let test2 = apiData && apiData.tracks.data.map(track => {
-    console.log(track);
     
     return(
       <div key={track.id}>
@@ -60,16 +63,13 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
       </div>
     );
   })
-}
   return (
     <section className="grid_wrapper">
     <div className="wrapper">
-    <img src={apiData && apiData.cover_medium} alt="" />
+    <img src={apiData && apiData.cover_medium} alt="" onClick={test2}/>
     <img src={apiData && apiData.cover_medium} alt="" />
   {/* <div>{apiData && apiData.tracks.data[0].title}</div> */}
-  <button onClick={() => {test6()}}>
- click me</button>
-      {/* {test2} */}
+  {test2}
   </div>
   </section>
   );
@@ -109,10 +109,8 @@ function App() {
         <div className="todo">
           <div className="item1">Jump back in</div>
         </div>
-        {/* <Displaytitle /> */}
       </Container>
       <FetchPage />
-      {/* <Player /> */}
     </div>
   );
 }

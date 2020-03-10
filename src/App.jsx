@@ -22,8 +22,18 @@ function App () {
         </nav>
 
         <div className= "todo">
-        <div className="item1">Velkommen til Hpotify</div>
+        <div className="item1">Jump back in</div>
         </div>
+
+        <div className= "Test">
+        <div className="box"></div>
+        <div className="box1"></div>
+        <div className="box2"></div>
+        <div className="box3"></div>
+        
+        </div>
+
+       
      
 
 

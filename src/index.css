@@ -32,7 +32,7 @@ html{
   text-align: center;
   font-family: 'Lato', sans-serif;
   color: #eae4e8;
-  margin-top: 4rem;
+  margin-top: 2rem;
  
 
 }
@@ -50,4 +50,87 @@ html{
   height: 50px;
   margin-top: 10px;
 
+}
+
+.logo:hover{
+  opacity: 0.6 ;
+  
+}
+
+.Test{
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+
+}
+
+
+
+.box{
+  background-color: #0d0d0d;
+  height: 5rem;
+  width: 2rem;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  animation: bouncebox 1s infinite;
+
+
+}
+@keyframes bouncebox{
+  0%{top: 0px;}
+  50%{top: 20px;}
+  100%{top: 0px;}
+}
+
+.box1{
+  background-color: #0d0d0d;
+  height: 5rem;
+  width: 2rem;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  left: 50px;
+  animation: bouncebox1 1s infinite;
+
+}
+@keyframes bouncebox1{
+  0%{top: 0px;}
+  50%{bottom: -20px;}
+  100%{top: 0px;}
+}
+
+.box2{
+  background-color: #0d0d0d;
+  height: 5rem;
+  width: 2rem;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  left: 100px;
+  animation: bouncebox2 1s infinite;
+}
+
+@keyframes bouncebox2{
+  0%{top: 0px;}
+  50%{top: -20px;}
+  100%{top: 0px;}
+}
+
+
+.box3{
+  background-color: #0d0d0d;
+  height: 5rem;
+  width: 2rem;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  left: 150px;
+  animation: bouncebox3 1s infinite;
+  
+}
+
+@keyframes bouncebox3{
+  0%{top: 0px;}
+  50%{top: 20px;}
+  100%{top: 0px;}
 }

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import logo from './logo1.png';
+import ReactPlayer from 'react-player'
 
 
 const FetchPage = props => {
   const [apiData, setApiData] = useState(null);
-
   useEffect(() => {
-    const fetchController = new AbortController();
     if (!apiData) {
       const fetchHeaders = new Headers();
       fetchHeaders.append('Accept', 'application/json');
@@ -15,11 +14,13 @@ const FetchPage = props => {
   // **********************************************
  //  laver en fetch 
 // ************************************************
-// fetch('https://deezerdevs-deezer.p.rapidapi.com/track/854914322', {
+
 fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
+
     // **********************************************
  //  sætter method og headers
 // ************************************************
+
   method: 'GET',
   headers: {
     'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com',
@@ -32,27 +33,65 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
   // **********************************************
  //  sætter data til at være consten setApiData
 // ************************************************
+
   .then(data => setApiData(data))
-  // **********************************************
- //  fanger hvis der er en fail
-// ************************************************
   .catch(err => {
     console.log(err);
   });
     }
-
-    return () => fetchController.abort();
-  }, [apiData]);
+  });
+  function test6(){
+  let test2 = apiData && apiData.tracks.data.map(track => {
+    console.log(track);
+    
+    return(
+      <div key={track.id}>
+        <p>{track.title}</p><p>{track.artist.name}</p>
+        <div className='player-wrapper'>
+        <ReactPlayer
+          url={track.preview}
+          className='react-player'
+          controls
+          width='300px'
+          height='50px'
+        />
+      </div>
+      
+      </div>
+    );
+  })
+}
   return (
+    <section className="grid_wrapper">
     <div className="wrapper">
-    <img src={apiData && apiData.cover} alt="" />
-    <img src={apiData && apiData.cover} alt="" />
-    {apiData && apiData.title}
-    <br/>
-  <div>{apiData && apiData.tracks.data[0].title}</div>
+    <img src={apiData && apiData.cover_medium} alt="" />
+    <img src={apiData && apiData.cover_medium} alt="" />
+  {/* <div>{apiData && apiData.tracks.data[0].title}</div> */}
+  <button onClick={() => {test6()}}>
+ click me</button>
+      {/* {test2} */}
   </div>
+  </section>
   );
 };
+
+
+// const Player = () => {
+//     return (
+//       <div className='player-wrapper'>
+//         <ReactPlayer
+//           url="https://cdns-preview-d.dzcdn.net/stream/c-de98e71ba0560593f855a280e96565ec-4.mp3"
+//           className='react-player'
+//           controls
+//           width='300px'
+//           height='100px'
+//         />
+//       </div>
+//     )
+// }
+
+
+
 
 const Container = props => {
   return <div> {props.children} </div>;
@@ -70,8 +109,10 @@ function App() {
         <div className="todo">
           <div className="item1">Jump back in</div>
         </div>
+        {/* <Displaytitle /> */}
       </Container>
       <FetchPage />
+      {/* <Player /> */}
     </div>
   );
 }

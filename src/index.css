@@ -52,11 +52,6 @@ html{
 
 }
 
-.logo:hover{
-  opacity: 0.6 ;
-  
-}
-
 .Test{
   display: grid;
   grid-template-columns: 35% 2fr 35%;
@@ -72,12 +67,14 @@ html{
   position: relative;
   grid-column: 2;
   grid-row: 1;
-  animation: bouncebox 2s infinite;
+  animation: bouncebox 3s infinite;
 }
 
 @keyframes bouncebox{
   0%{top: 0px;}
-  50%{top: 20px;}
+  25%{top:15px;}
+  50%{top: 30px;}
+  75%{top: 15px;}
   100%{top: 0px;}
 }
 
@@ -89,12 +86,15 @@ html{
   grid-column: 2;
   grid-row: 1;
   left: 30px;
-  animation: bouncebox1 2s infinite;
+  animation: bouncebox1 3s infinite;
+  animation-delay: 3s;
 
 }
 @keyframes bouncebox1{
   0%{top: 0px;}
-  50%{top: -20px;}
+  25%{top: -15px;}
+  50%{top: -30px;}
+  75%{top:-15px;}
   100%{top: 0px;}
 }
 
@@ -106,12 +106,15 @@ html{
   grid-column: 2;
   grid-row: 1;
   left: 60px;
-  animation: bouncebox2 2s infinite;
+  animation: bouncebox2 3s infinite;
+  animation-delay: 5s;
 }
 
 @keyframes bouncebox2{
   0%{top: 0px;}
-  50%{top: 20px;}
+  25%{top: 15px;}
+  50%{top: 30px;}
+  75%{top: 15px;}
   100%{top: 0px;}
 }
 
@@ -124,12 +127,14 @@ html{
   grid-column: 2;
   grid-row: 1;
   left: 90px;
-  animation: bouncebox3 2s infinite;
-  
+  animation: bouncebox3 3s infinite;
+  animation-delay: 7s;
 }
 
 @keyframes bouncebox3{
   0%{top: 0px;}
-  50%{top: -20px;}
+  25%{top: -15px;}
+  50%{top: -30px;}
+  75%{top: -15px;}
   100%{top: 0px;}
 }

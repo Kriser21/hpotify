@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.scss';
 import logo from './logo1.png';
 import ReactPlayer from 'react-player'
-import { render } from '@testing-library/react';
 
 
 const FetchPage = props => {
@@ -45,8 +44,9 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
  // loopper igemen array til tracks
 // ************************************************
 
+
+
   let test2 = apiData && apiData.tracks.data.map(track => {
-    
     return(
       <div key={track.id}>
         <p>{track.title}</p><p>{track.artist.name}</p>
@@ -63,18 +63,21 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
       </div>
     );
   })
+
+
+
+
   return (
     <section className="grid_wrapper">
-    <div className="wrapper">
-    <img src={apiData && apiData.cover_medium} alt="" onClick={test2}/>
+    <div className="wrapper" id="wrapper">
+    <img src={apiData && apiData.cover_medium} alt="" />
     <img src={apiData && apiData.cover_medium} alt="" />
   {/* <div>{apiData && apiData.tracks.data[0].title}</div> */}
   {test2}
   </div>
   </section>
   );
-};
-
+}
 
 // const Player = () => {
 //     return (

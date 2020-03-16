@@ -1,0 +1,27 @@
+.grid_wrapper{
+  margin-top: 10px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+
+
+.wrapper {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1fr);
+  grid-gap: 10px;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  .player-wrapper{
+    margin-top: 10px;
+  }
+  p p{
+    display: inline;
+    margin-left: 20px;
+  }
+}
+}

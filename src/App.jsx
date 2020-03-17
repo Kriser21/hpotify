@@ -6,6 +6,7 @@ import ReactPlayer from 'react-player'
 
 const FetchPage = props => {
   const [apiData, setApiData] = useState(null);
+  // laver en state 
   const [showPlaylist, setShowPlaylist] = useState(false);
   useEffect(() => {
     if (!apiData) {
@@ -71,6 +72,7 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
   return (
     <section className="grid_wrapper">
     <div className="wrapper" id="wrapper">
+      {/* laver en onclick der bruger den state til vise playlisten og game den igen */}
     <img src={apiData && apiData.cover_medium} alt="" onClick={() => setShowPlaylist(!showPlaylist)}/>
     {showPlaylist && <div className="test">{ test2 }</div>}
   {/* {test2} */}

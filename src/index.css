@@ -32,7 +32,6 @@ html{
   font-family: 'Lato', sans-serif;
   color: #eae4e8;
   margin-top: 2rem;
-
 }
 
 .Dez{
@@ -44,8 +43,10 @@ html{
 }
 
 .logo{
-  float: left;
+  position: absolute;
+  left: 1%;
   height: 50px;
   margin-top: 10px;
 
 }
+

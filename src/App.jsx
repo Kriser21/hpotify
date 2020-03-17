@@ -6,6 +6,7 @@ import ReactPlayer from 'react-player'
 
 const FetchPage = props => {
   const [apiData, setApiData] = useState(null);
+  const [showPlaylist, setShowPlaylist] = useState(false);
   useEffect(() => {
     if (!apiData) {
       const fetchHeaders = new Headers();
@@ -70,10 +71,9 @@ fetch('https://deezerdevs-deezer.p.rapidapi.com/album/127270232', {
   return (
     <section className="grid_wrapper">
     <div className="wrapper" id="wrapper">
-    <img src={apiData && apiData.cover_medium} alt="" />
-    <img src={apiData && apiData.cover_medium} alt="" />
-  {/* <div>{apiData && apiData.tracks.data[0].title}</div> */}
-  {test2}
+    <img src={apiData && apiData.cover_medium} alt="" onClick={() => setShowPlaylist(!showPlaylist)}/>
+    {showPlaylist && <div className="test">{ test2 }</div>}
+  {/* {test2} */}
   </div>
   </section>
   );

@@ -72,7 +72,7 @@ const FetchPage = props => {
           onClick={() => setShowPlaylist(!showPlaylist)}
         />
         {showPlaylist && (
-          <div className="test">
+          <div className="playlist">
             <p onClick={() => setShowPlaylist(!showPlaylist)} className="close">x</p> {playList}
           </div>
         )}

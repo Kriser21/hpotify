@@ -49,8 +49,8 @@ const FetchPage = props => {
     apiData.tracks.data.map(track => {
       return (
         <div key={track.id} className="playlistInfo">
-          <p>song title: {track.title}</p>
-          <p>{track.artist.name}</p>
+          <p>Song: {track.title}</p> <br/>
+          <p>Artist: {track.artist.name}</p>
             <ReactPlayer
               url={track.preview}
               className="react-player"

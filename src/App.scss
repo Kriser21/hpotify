@@ -1,14 +1,14 @@
-*{
+* {
   padding: 0;
 }
 
-.playList1{
+.playList1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.close{
+.close {
   position: absolute;
   top: -0.2%;
   left: 1%;
@@ -17,25 +17,24 @@
   font-size: 4vh;
 }
 
-.playlist{
+.playlist {
   position: absolute;
   top: 73px;
   width: 100%;
   text-align: center;
-  background-color:rgba(128, 128, 128, 0.9);
+  background-color: rgba(128, 128, 128, 0.9);
   padding-bottom: 10px;
   font-family: 'Lato', sans-serif;
 
-
-  p{
+  p {
     display: inline-block;
-    margin: 10px 5px;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 2.3vh;
   }
 
-  .react-player{
+  .react-player {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+    margin: 5px auto 25px auto;
   }
 }

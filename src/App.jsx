@@ -9,9 +9,6 @@ const FetchPage = props => {
   const [showPlaylist, setShowPlaylist] = useState(false);
   useEffect(() => {
     if (!apiData) {
-      // const fetchHeaders = new Headers();
-      // fetchHeaders.append('Accept', 'application/json');
-
       // **********************************************
       //  laver en fetch
       // ************************************************

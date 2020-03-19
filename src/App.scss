@@ -1,27 +1,41 @@
-.grid_wrapper{
-  margin-top: 10px;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-
-
-.wrapper {
-  grid-column: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(1fr);
-  grid-gap: 10px;
-  text-align: center;
-
-  img {
-    width: 100%;
-  }
-
-  .player-wrapper{
-    margin-top: 10px;
-  }
-  p p{
-    display: inline;
-    margin-left: 20px;
-  }
+*{
+  padding: 0;
 }
+
+.playList1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close{
+  position: absolute;
+  top: -0.2%;
+  left: 1%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 4vh;
+}
+
+.test{
+  position: absolute;
+  top: 73px;
+  width: 100%;
+  text-align: center;
+  background-color:rgba(128, 128, 128, 0.9);
+  padding-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+
+
+  p{
+    display: inline-block;
+    margin: 10px 5px;
+  }
+
+  .react-player{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }
